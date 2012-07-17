@@ -1,0 +1,58 @@
+* {
+  outline: none;
+}
+
+body {
+  position:relative;
+}
+#clear {
+  clear:both;
+}
+ul li {
+  list-style: none;
+}
+
+textarea {
+  background-color: blue;
+  border: medium none;
+  border-radius: 35px 35px 35px 35px;
+  color: white;
+  height: 80%;
+  left: 15px;
+  overflow: hidden;
+  position: absolute;
+  resize: none;
+  top: 5px;
+  width: 85%;
+}
+
+.ui-icon {
+  background-image: none;
+}
+
+.parent textarea {
+  background-color: green;
+}
+
+.draggable.parent {
+  background-color: green;
+}
+
+.draggable {
+  position:absolute;
+  text-align: center;
+  height: 70px;
+  width: 70px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  background-color: #cccccc;
+  border-color: black;
+}
+.dragContainer {
+  position:relative;
+}
+#resizable {
+  width:200px;
+  height:200px;
+  background-color:gray;
+}
