@@ -50,9 +50,42 @@ textarea {
 }
 .dragContainer {
   position:relative;
+  height:100%;
+  width:100%;
 }
+.lineContainer{
+  position:relative;
+  height:100%;
+  width:100%;
+  top:0px;
+
+}
+
+.line{
+  position:absolute;
+  top:0px;
+  height:500px;
+  width:500px;
+  z-index: -2;
+}
+
+.widgetContainer{
+  height:100%;
+  width:100%;
+  position:relative;
+}
+
+.widget{
+  position:absolute;
+  background-color:gray;
+  opacity: 0.8;
+}
+
 #resizable {
   width:200px;
   height:200px;
   background-color:gray;
+}
+#data{
+  display:none;
 }

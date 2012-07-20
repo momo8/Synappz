@@ -27,6 +27,18 @@ return dom.bind( "sortupdate", function(event, ui) { on_update(); } );
     return js_void;
 }
 
+##register draggable_on_drag : Dom.private.element, ( -> void) -> void
+##args(dom, on_drag)
+{
+  return dom.bind( "drag", 
+      function(event, ui) { 
+          document.getElementById("draggableData").innerHTML = "<div id='draggableDataEvent'>"+event.target.id+"</div>";
+          document.getElementById("draggableData").innerHTML += "<div id='draggableDataTop'>"+ui.offset.top+"</div>";
+          document.getElementById("draggableData").innerHTML += "<div id='draggableDataLeft'>"+ui.offset.left+"</div>";
+           on_drag();
+      } );
+}
+
 ##register mk_resizable: Dom.private.element -> void
 ##args(dom)
 {
@@ -45,9 +57,9 @@ return dom.bind( "sortupdate", function(event, ui) { on_update(); } );
    		  //item ="<div>we made it</div>";
           //domitem=Dom.of_xhtml(item);
           //Dom.put_at_end(dom,domitem);
-          document.getElementById("resizableData").innerHTML = "<div id='event'>"+event.target.id+"</div>";
-          document.getElementById("resizableData").innerHTML += "<div id='width'>"+ui.size.width+"</div>";
-          document.getElementById("resizableData").innerHTML += "<div id='height'>"+ui.size.height+"</div>";
+          document.getElementById("resizableData").innerHTML = "<div id='resizeableDataEvent'>"+event.target.id+"</div>";
+          document.getElementById("resizableData").innerHTML += "<div id='resizeableDataWidth'>"+ui.size.width+"</div>";
+          document.getElementById("resizableData").innerHTML += "<div id='resizeabledataHeight'>"+ui.size.height+"</div>";
            on_stop();
    		} );
   

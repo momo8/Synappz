@@ -26,6 +26,11 @@ module jQueryUI {
       %%JQueryUI.mk_draggable%%(elt)
 
     }
+
+    function void on_drag(dom, f) {
+      elt = Dom.of_selection(dom)
+      %%JQueryUI.draggable_on_drag%%(elt,f)
+    }
   }
   module Resizable {
     function void mk_resizable(dom) {
