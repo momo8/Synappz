@@ -145,9 +145,9 @@ function show_mindmap_content(_){
 }
 
 function page() {
-  <span onClick={show_mindmap}> Mindmap</span>
-  <span onClick={show_content}> Content</span>
-  <span onClick={show_mindmap_content}> both</span>
+  <span onClick={show_mindmap}><a> Mindmap</a></span>
+  <span onClick={show_content}><a> Content</a></span>
+  <span onClick={show_mindmap_content}><a> both</a></span>
   <div id="dragContainer" style="height:0px;">
     <div id=draggable0 class=draggable  onready={function(_){ mk_draggresizable_c(#draggable0) } }>   
       <span onClick={function(_){click_new(#draggable0)}}>New</span><br>

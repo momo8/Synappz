@@ -45,8 +45,8 @@ textarea {
   width: 70px;
   -moz-border-radius: 35px;
   border-radius: 35px;
-  background-color: #cccccc;
-  border-color: black;
+  background-color: yellowgreen;
+  box-shadow: 5px 5px 3px #333333;
 }
 .dragContainer {
   position:relative;
@@ -77,8 +77,12 @@ textarea {
 
 .widget{
   position:absolute;
-  background-color:gray;
+  background-color:yellowgreen;
   opacity: 0.8;
+  box-shadow: 10px 10px 5px black;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
 }
 
 #resizable {
