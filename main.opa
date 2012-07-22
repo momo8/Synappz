@@ -148,7 +148,7 @@ function page() {
   <span onClick={show_mindmap}> Mindmap</span>
   <span onClick={show_content}> Content</span>
   <span onClick={show_mindmap_content}> both</span>
-  <div id="dragContainer">
+  <div id="dragContainer" style="height:0px;">
     <div id=draggable0 class=draggable  onready={function(_){ mk_draggresizable_c(#draggable0) } }>   
       <span onClick={function(_){click_new(#draggable0)}}>New</span><br>
       <span onClick={function(_){open(0)}}>Open</span><br>
@@ -156,9 +156,9 @@ function page() {
       
     </div>
   </div>
-  <div id="lineContainer">
+  <div id="lineContainer" style="height:0px;">
   </div>
-  <div id="widgetContainer">
+  <div id="widgetContainer" style="height:0px;">
   </div>
   <div id=data>
     <div id=resizableData></div>
