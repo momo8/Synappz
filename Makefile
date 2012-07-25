@@ -3,13 +3,13 @@
 
 EXE = sample.exe
 PACKNAME =
-SRC =
-MAINSRC = main.opa
+SRC = 
+MAINSRC = wiki.opa main.opa
 PCKDIR = ./packages/
-PCK = jQueryUI.opx
+PCK = jQueryUI.opx 
 PLUGIN =
 PLUGINDIR =
-OTHER_DEPENDS =
+OTHER_DEPENDS = 
 
 #Compiler variables
 OPACOMPILER = opa

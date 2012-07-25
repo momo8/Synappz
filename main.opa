@@ -1,6 +1,7 @@
 import jQueryUI
 import stdlib.web.canvas
 
+import myapp.wiki
 
 myCount = Mutable.make(0); 
 
@@ -254,11 +255,23 @@ function click_new(string parent_element_name ){
   */
 
 }
+//widgets = [Wiki.page]
+
+
+function show_widget(element,nr){
+  //make element draggable
+  mk_draggresizable(element);
+  //show widget
+
+  wiki.page("widget{nr}");
+
+
+}
 
 function open(nr){
   name = "widget{nr}";
   dom element = #{name};
-  #widgetContainer =+ <div id="widget{nr}" class="widget" onready={function(_){mk_draggresizable(element)}}>widget</div>;
+  #widgetContainer =+ <div id="widget{nr}" class="widget" onready={function(_){show_widget(element,nr)}}></div>;
   int height=350;
   int width=350;
   Dom.set_height(element,height);
@@ -292,8 +305,8 @@ function page() {
   <div id="dragContainer" style="height:0px;">
     <div id=draggable0 class=draggable  onready={function(_){ mk_draggable_c(#draggable0) } }>   
       <span onClick={function(_){click_new( "draggable0" )}}>New</span><br>
-      <span onClick={function(_){open( #draggable0 )}}>Open</span><br>
-      <span onClick={function(_){close( #draggable0 )}}>Close</span>
+      <span onClick={function(_){open( 0 )}}>Open</span><br>
+      <span onClick={function(_){close( 0 )}}>Close</span>
       <div class=hidden id="draggable0parent"></div>
       <div class=hidden id="draggable0childs"></div>
       <div class=hidden id="draggable0counter">0</div>
